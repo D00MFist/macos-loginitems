@@ -9,9 +9,9 @@ use crate::loginitems::{LoginItemsData, LoginItemsResults};
 
 pub fn parse_loginitems_system() -> Result<Vec<LoginItemsResults>, Box<dyn error::Error + 'static>>
 {
-    let base_directory = "/Users/";
+    let base_directory = "/Users/Shared/BTM";
     let loginitems_path =
-        "/Library/Application Support/com.apple.backgroundtaskmanagementagent/backgrounditems.btm";
+        "/2/BackgroundItems-v3.btm";
 
     let mut loginitems_data: Vec<LoginItemsResults> = Vec::new();
     for dir in read_dir(base_directory)? {
